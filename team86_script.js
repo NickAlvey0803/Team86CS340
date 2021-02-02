@@ -1,6 +1,9 @@
-var express = require('express');
-var app = express();
-app.use(express.static(__dirname + '/public')); //__dir and not _dir
-var port = 35642; // you can use any port
-app.listen(port);
-console.log('server on' + port);
+const http = require('http')
+const fs = require('fs')
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'content-type': 'text/html' })
+  fs.createReadStream('team86_index.html').pipe(res)
+})
+
+server.listen(process.env.PORT || 35642)
