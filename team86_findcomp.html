@@ -8,14 +8,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="team86_style.css">
-    <title>WhiteLights Homepage</title>
-    <h1 class="page_header">Welcome to WhiteLights</h1>
+    <title>Find a Competition</title>
+    <h1 class="page_header">Find a Competition</h1>
   </head>
   <body>
     <div class = "topsection">
 
       <div class = "topline_headers">
-        <p class="introduction_1"> [text header for website]</p>
+        <p class="introduction_1">Search by any of the categories below:</p>
 
       </div>
 
@@ -36,21 +36,40 @@
     </div>
 
 
-    <!-- Currently, this page is blank with a Welcome Div, a Trending Videos Div,  -->
+    <!-- Currently, this page is blank with a Find Competition Form  -->
 
+
+      <div>
+        <form>
+      <fieldset>
+        <legend>Find a Compeition</legend>
+        <label for="Competition_name">Competition Name: </label>
+        <input type="text" name="competition_name" id="competition_name">
+        <label for="LiftType">Lift Type: </label>
+        <input type="text" name="lift_type" id="lift_type">
+        <label for="Weightclass">Weight Class: </label>
+        <input type="text" name="weightclass" id="weightclass">
+        <label for="LiftReps">Lift Reps: </label>
+        <input type="text" name="reps" id="reps">
+        <input type="submit" id="userSubmit">
+      </fieldset>
+    </form>
+
+    </div>
 
     <div>
-        <h2>Welcome Description</h2>
-
-          <p>Some Welcome Text</p>
-
-          <p>Saying Hello</p>
-
+      <h2>Result</h2>
+      <ul>
+        <li><span>Competition Name: </span><span id="compname"></span></li>
+        <li><span>Lift Type: </span><span id="ltype"></span></li>
+        <li><span>Weight Class: </span><span id="wc"></span></li>
+        <li><span>Lift Reps: </span><span id="lreps"></span></li>
+      </ul>
     </div>
 
 
     <div class = "bottomlinkdiv">
-      <a class = "bottomlink" href="google.com" target = "_blank"> Currently Just a Google Link</a>
+      <a class = "bottomlink" href="https://www.google.com" target = "_blank">Olympic Standard Rules</a>
     </div>
 
       <script src="team86_script.js"></script>

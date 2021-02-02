@@ -8,14 +8,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="team86_style.css">
-    <title>WhiteLights Homepage</title>
-    <h1 class="page_header">Welcome to WhiteLights</h1>
+    <title>Find a User</title>
+    <h1 class="page_header">Find a User</h1>
   </head>
   <body>
     <div class = "topsection">
 
       <div class = "topline_headers">
-        <p class="introduction_1"> [text header for website]</p>
+        <p class="introduction_1">Search by any of the categories below:</p>
 
       </div>
 
@@ -36,21 +36,37 @@
     </div>
 
 
-    <!-- Currently, this page is blank with a Welcome Div, a Trending Videos Div,  -->
+    <!-- Currently, this page is blank with a Find User Form,  -->
 
 
     <div>
-        <h2>Welcome Description</h2>
+        <form>
+      <fieldset>
+        <legend>Find a User</legend>
+        <label for="Username">Username: </label>
+        <input type="text" name="username" id="username">
+        <label for="UserScore">Total User Score: </label>
+        <input type="text" name="score_data" id="score_data">
+        <label for="Description">User's Description: </label>
+        <input type="text" name="description" id="description">
+        <input type="submit" id="userSubmit">
+      </fieldset>
+    </form>
 
-          <p>Some Welcome Text</p>
+    </div>
 
-          <p>Saying Hello</p>
-
+    <div>
+      <h2>Result</h2>
+      <ul>
+        <li><span>Username: </span><span id="name"></span></li>
+        <li><span>Total User Score: </span><span id="score"></span></li>
+        <li><span>User's Description: </span><span id="descr"></span></li>
+      </ul>
     </div>
 
 
     <div class = "bottomlinkdiv">
-      <a class = "bottomlink" href="google.com" target = "_blank"> Currently Just a Google Link</a>
+      <a class = "bottomlink" href="https://www.google.com" target = "_blank">Olympic Standard Rules</a>
     </div>
 
       <script src="team86_script.js"></script>
