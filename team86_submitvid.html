@@ -6,55 +6,72 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="team86_style.css">
-    <title>WhiteLights Homepage</title>
-    <h1 class="page_header">Welcome to WhiteLights</h1>
-  </head>
-  <body>
-    <div class = "topsection">
 
-      <div class = "topline_headers">
-        <p class="introduction_1"> [text header for website]</p>
+<head>
+  <link rel="stylesheet" href="team86_style.css">
+  <title>WhiteLights Homepage</title>
+  <h1 class="page_header">Welcome to WhiteLights</h1>
+</head>
 
-      </div>
+<body>
+  <div class="topsection">
 
-      <div class = "nav_list">
-        <nav>
-          <ul class = "Navigation">
-            <li class = "link"><a class = "nav_link" href="team86_index.html">Home</a></li>
-            <li class = "link_current"><strong>Submit a Video</strong></li>
-            <!-- <li class = "link"><a class = "nav_link" href="team86_submitvid.html">Submit a Video</a></li> -->
-            <li class = "link"><a class = "nav_link" href="team86_myprof.html">My Profile</a></li>
-            <li class = "link"><a class = "nav_link" href="team86_finduser.html">Find a User</a></li>
-            <li class = "link"><a class = "nav_link" href="team86_findvideo.html">Find a Video</a></li>
-            <li class = "link"><a class = "nav_link" href="team86_findcomp.html">Find a Competition</a></li>
-            <li class = "link"><a class = "nav_link" href="team86_admin.html">Administration</a></li>
-
-          </ul>
-        </nav>
-      </div>
-    </div>
-
-
-    <!-- Currently, this page is blank with a Welcome Div, a Trending Videos Div,  -->
-
-
-    <div>
-        <h2>Welcome Description</h2>
-
-          <p>Some Welcome Text</p>
-
-          <p>Saying Hello</p>
+    <div class="topline_headers">
+      <p class="introduction_1"> [text header for website]</p>
 
     </div>
 
+    <div class="nav_list">
+      <nav>
+        <ul class="Navigation">
+          <li class="link"><a class="nav_link" href="team86_index.html">Home</a></li>
+          <li class="link_current"><strong>Submit a Video</strong></li>
+          <!-- <li class = "link"><a class = "nav_link" href="team86_submitvid.html">Submit a Video</a></li> -->
+          <li class="link"><a class="nav_link" href="team86_myprof.html">My Profile</a></li>
+          <li class="link"><a class="nav_link" href="team86_finduser.html">Find a User</a></li>
+          <li class="link"><a class="nav_link" href="team86_findvideo.html">Find a Video</a></li>
+          <li class="link"><a class="nav_link" href="team86_findcomp.html">Find a Competition</a></li>
+          <li class="link"><a class="nav_link" href="team86_admin.html">Administration</a></li>
 
-    <div class = "bottomlinkdiv">
-      <a class = "bottomlink" href="google.com" target = "_blank"> Currently Just a Google Link</a>
+        </ul>
+      </nav>
     </div>
+  </div>
+  <table width=50%>
+    <div align="right">
+      <tr>
+        <td><label for="title">Title: </label></td>
+        <td><input type="text" id="title" name="title"></td>
+      </tr>
+      <tr>
+        <td><label for="desc">Description: </label></td>
+        <td><input type="text" id="desc" name="desc"></td>
+      </tr>
+      <tr>
+        <td><label for="type">Lift type: </label></td>
+        <td><input type="text" id="type" name="type"></td>
+      </tr>
+      <tr>
+        <td><label for="weight">Weight on the bar: </label></td>
+        <td><input type="text" id="weight" name="weight"></td>
+      </tr>
+      <tr>
+        <td><label for="bw">Bodyweight: </label></td>
+        <td><input type="text" id="bw" name="bw"></td>
+      </tr>
+      <tr>
+        <td><label for="link">Link: </label></td>
+        <td><input type="text" id="link" name="link"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Submit"></td>
+      </tr>
+      </form>
+    </div>
+  </table>
+  </div>
+  <script src="team86_script.js"></script>
 
-      <script src="team86_script.js"></script>
-  
-    </body>
-  </html>
+</body>
+
+</html>
