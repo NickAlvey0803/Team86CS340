@@ -5,10 +5,25 @@ let handleRequest = (request, response) => {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
-    fs.readFile('./index.html', null, function (error, data) {
+    fs.readFile('./team86_index.html', null, function (error, data) {
         if (error) {
             response.writeHead(404);
-            respone.write('Whoops! File not found!');
+            response.write('Whoops! File not found!');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+};
+
+let handleRequest2 = (request, response) => {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    fs.readFile('./team86_findvideo.html', null, function (error, data) {
+        if (error) {
+            response.writeHead(404);
+            response.write('Whoops! File not found!');
         } else {
             response.write(data);
         }
