@@ -1,9 +1,10 @@
-var path = require('path');
 var express = require('express');
 var app = express();
+var path = require('path');
 
-var dir = path.join(__dirname, 'public');
+// viewed at http://localhost:8080
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/team86_index.html'));
+});
 
-app.use(express.static(dir));
-
-app.listen(35642, () => console.log('Listening on http://localhost:35642/'));
+app.listen(35642);
