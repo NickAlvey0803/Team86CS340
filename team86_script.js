@@ -1,6 +1,19 @@
-var express = require('express');
-var app = express();
-app.use(express.static(__dirname + '/public')); //__dir and not _dir
-var port = 35642; // you can use any port
-app.listen(port);
-console.log('server on' + port);
+let http = require('http');
+let fs = require('fs');
+ 
+let handleRequest = (request, response) => {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    fs.readFile('./index.html', null, function (error, data) {
+        if (error) {
+            response.writeHead(404);
+            respone.write('Whoops! File not found!');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+};
+ 
+http.createServer(handleRequest).listen(35642);
