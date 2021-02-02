@@ -1,9 +1,9 @@
-const http = require('http')
-const fs = require('fs')
+var path = require('path');
+var express = require('express');
+var app = express();
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('team86_index.html').pipe(res)
-})
+var dir = path.join(__dirname, 'public');
 
-server.listen(process.env.PORT || 35642)
+app.use(express.static(dir));
+
+app.listen(35642, () => console.log('Listening on http://localhost:35642/'));
