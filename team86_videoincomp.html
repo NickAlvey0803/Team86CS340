@@ -8,14 +8,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="team86_style.css">
-    <title>Find a Competition</title>
-    <h1 class="page_header">Find a Competition</h1>
+    <title>Find Videos per Competition/Competitions per Video</title>
+    <h1 class="page_header">Find Videos per Competition/Competitions per Video</h1>
   </head>
   <body>
     <div class = "topsection">
 
       <div class = "topline_headers">
-        <p class="introduction_1">Search by any of the categories below:</p>
+        <p class="introduction_1">Search by either the Competition or Video:</p>
 
       </div>
 
@@ -28,10 +28,10 @@
             <li class = "link"><a class = "nav_link" href="team86_myprof.html">My Profile</a></li>
             <li class = "link"><a class = "nav_link" href="team86_finduser.html">Find a User</a></li>
             <li class = "link"><a class = "nav_link" href="team86_findvideo.html">Find a Video</a></li>
-            <li class = "link_current"><strong>Find a Competition</strong></li>
-            <!-- <li class = "link"><a class = "nav_link" href="team86_findcomp.html">Find a Competition</a></li> -->
+            <li class = "link"><a class = "nav_link" href="team86_findcomp.html">Find a Competition</a></li>
             <li class = "link"><a class = "nav_link" href="team86_admin.html">Create a Competition</a></li>
-            <li class = "link"><a class = "nav_link" href="team86_videoincomp.html">Videos per Competition/Competitions per Video</a></li>
+            <li class = "link_current"><strong>Videos per Competition/Competitions per Video</strong></li>
+            <!-- <li class = "link"><a class = "nav_link" href="team86_videoincomp.html">Videos per Competition/Competitions per Video</a></li> -->
           </ul>
         </nav>
       </div>
@@ -44,7 +44,7 @@
       <div class = "bodydiv">
         <form>
       <fieldset>
-        <legend>Find a Competition</legend>
+        <legend>Search to Find all Videos in a Compeition</legend>
         <label for="Competition_name">Competition Name: </label>
         <input type="text" name="competition_name" id="competition_name">
         <label for="LiftType">Lift Type: </label>
@@ -60,12 +60,34 @@
     </div>
 
     <div class = "bodydiv">
-      <h2>Result</h2>
+      <h2>Videos in Competition "Example": </h2>
       <ul>
-        <li><span>Competition Name: </span><span id="compname"></span></li>
-        <li><span>Lift Type: </span><span id="ltype"></span></li>
-        <li><span>Weight Class: </span><span id="wc"></span></li>
-        <li><span>Lift Reps: </span><span id="lreps"></span></li>
+        <li><span>Example</span><span id="vid1"></span></li>
+      </ul>
+    </div>
+
+    <div class = "bodydiv">
+        <form>
+      <fieldset>
+        <legend>Search to Find all Competitions for a Given Video</legend>
+        <label for="title">Title:  </label>
+        <input type="text" name="title" id="title">
+        <label for="type">Lift Type: </label>
+        <input type="text" name="type" id="lift_type">
+        <label for="Weight">Weight on Bar: </label>
+        <input type="text" name="weight" id="weight">
+        <label for="bw">Bodyweight: </label>
+        <input type="text" name="bw" id="bw">
+        <input type="submit" id="userSubmit">
+      </fieldset>
+    </form>
+
+    </div>
+
+    <div class = "bodydiv">
+      <h2>Competitions Video "Example" has been Submitted to: </h2>
+      <ul>
+        <li><span>Example</span><span id="vid1"></span></li>
       </ul>
     </div>
 
