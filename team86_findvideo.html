@@ -40,55 +40,36 @@
   </div>
 
 
+
 <div class = "bodydiv">
-  <table>
-    <tr>
-      <td>Name</td>
-      <td>Author</td>
-      <td>Link</td>
-    </tr>
-    <tr>
-      <td>Sample to navigate to view lift</td>
-      <td>bob123</td>
-      <td><a href="team86_viewvideo.html">View</a></td>
-    </tr>
-    <tr>
-      <td>Another sample</td>
-      <td>aaaaaaaa</td>
-      <td><a href="team86_viewvideo.html">View</a></td>
-    </tr>
-  </table>
+    <form>
+  <fieldset>
+    <legend>Find a Video</legend>
+    <label for="vid_name">Video Name: </label>
+    <input type="text" name="vid_name" id="vid_name">
+    <label for="uploader">Uploader: </label>
+    <input type="text" name="uploader" id="uploader">
+    <label for="ltype">Lift Type: </label>
+    <input type="text" name="ltype" id="ltype">
+    <label for="wclass">Weight Class: </label>
+    <input type="text" name="wclass" id="wclass">
+    <label for="score">Score: </label>
+    <input type="text" name="score" id="score">
+  </fieldset>
+</form>
+
 </div>
 
-    <div class = "bodydiv">
-        <form>
-      <fieldset>
-        <legend>Find a Video</legend>
-        <label for="vid_name">Video Name: </label>
-        <input type="text" name="vid_name" id="vid_name">
-        <label for="uploader">Uploader: </label>
-        <input type="text" name="uploader" id="uploader">
-        <label for="ltype">Lift Type: </label>
-        <input type="text" name="ltype" id="ltype">
-        <label for="wclass">Weight Class: </label>
-        <input type="text" name="wclass" id="wclass">
-        <label for="score">Score: </label>
-        <input type="text" name="score" id="score">
-      </fieldset>
-    </form>
-
-    </div>
-
-    <div class = "bodydiv">
-      <h2>Result</h2>
-      <ul>
-        <li><span>Video Name: </span><span id="vidname"></span></li>
-        <li><span>Uploader: </span><span id="uploader"></span></li>
-        <li><span>Lift Type: </span><span id="ltype"></span></li>
-        <li><span>Weight Class: </span><span id="wc"></span></li>
-        <li><span>Score: </span><span id="score"></span></li>
-      </ul>
-    </div>
+<div class = "bodydiv">
+  <h2>Result</h2>
+  <ul>
+    <li><span>Video Name: </span><span id="vidname"></span></li>
+    <li><span>Uploader: </span><span id="uploader"></span></li>
+    <li><span>Lift Type: </span><span id="ltype"></span></li>
+    <li><span>Weight Class: </span><span id="wc"></span></li>
+    <li><span>Score: </span><span id="score"></span></li>
+  </ul>
+</div>
 
 
   <script src="team86_script.js"></script>
