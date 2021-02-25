@@ -1,0 +1,79 @@
+
+<head>
+    <title>Competitions of Whitelights</title>
+    <h1 class="page_header">Competitions</h1>
+    <link rel="stylesheet" href="team86_style.css">
+</head>
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+
+<script src="/competitions-frontend.js"></script>
+
+<div class="nav_list">
+            <nav>
+                <ul class="Navigation">
+                    <li class="link"><a class="nav_link" href="/index.html">Home</a></li>
+                    <li class="link"><a class="nav_link" href="/users">Users</a></li>
+                    <li class="link"><a class="nav_link" href="/videos">Videos</a></li>
+                    <li class = "link_current"><strong>Competitions</strong></li>
+                    <li class="link"><a class="nav_link" href="/comments">Comments</a></li>
+                    <li class="link"><a class="nav_link" href="/videos_competitions">Videos/Competitions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<form>
+  <fieldset>
+    <legend>Upload Some Information About Your Competition</legend>
+    <label for="competition_name">Competition Name: </label>
+    <input type="text" name="competition_name" id="competition_name">
+    <label for="lift_type">Which Lift(s) Will It Be For?: </label>
+    <input type="text" name="lift_type" id="lift_type">
+    <label for="weight_class">Which Weight Class Is It For?: </label>
+    <input type="text" name="weight_class" id="weight_class">
+    <label for="lift_reps">How Many Reps Did You Do?: </label>
+    <input type="text" name="lift_reps" id="lift_reps">
+    <input type="submit" id="competitionSubmit">
+  </fieldset>
+</form>
+
+<table class= "bodydiv">
+
+    <tr>
+
+        <th>Competition Name</th>
+        <th>Lift Type</th>
+        <th>Weight Class</th>
+        <th>Number of Reps</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    {{#each results}}
+    <tr>
+        
+        <td>{{this.competition_name}}</td>
+        <td>{{this.lift_type}}</td>
+        <td>{{this.weight_class}}</td>
+        <td>{{this.lift_reps}}</td>
+        <td>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.competition_id}}">
+                <input type="submit", name = "deleteSubmit", , id = "deleteSubmit", value="DELETE">
+            </form>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.competition_id}}">
+                <input type="submit", name = "editSubmit", id="editSubmit", value="EDIT">
+            </form>
+
+        </td>
+    </tr>
+    {{/each}}
+   
+</table>

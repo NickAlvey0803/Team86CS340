@@ -1,0 +1,78 @@
+
+<head>
+    <title>Users of Whitelights</title>
+    <h1 class="page_header">Users</h1>
+    <link rel="stylesheet" href="team86_style.css">
+</head>
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+
+<script src="/users-frontend.js"></script>
+
+<div class="nav_list">
+            <nav>
+                <ul class="Navigation">
+                    <li class="link"><a class="nav_link" href="/index.html">Home</a></li>
+                    <li class = "link_current"><strong>Users</strong></li>
+                    <li class="link"><a class="nav_link" href="/videos">Videos</a></li>
+                    <li class="link"><a class="nav_link" href="/competitions">Competitions</a></li>
+                    <li class="link"><a class="nav_link" href="/comments">Comments</a></li>
+                    <li class="link"><a class="nav_link" href="/videos_competitions">Videos/Competitions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<form>
+  <fieldset>
+    <legend>Set Up Your Account</legend>
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username">
+    <label for="password">Password: </label>
+    <input type="text" name="password" id="password">
+    <label for="description">Describe Yourself: </label>
+    <input type="text" name="description" id="description">
+    <label for="user_score">What's Your Score?: </label>
+    <input type="text" name="user_score" id="user_score">
+    <input type="submit" id="userSubmit">
+  </fieldset>
+</form>
+
+<table class= "bodydiv">
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Description</th>
+        <th>User Score</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    {{#each results}}
+    <tr>
+        
+        <td>{{this.username}}</td>
+        <td>{{this.password}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.user_score}}</td>
+        <td>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.user_id}}">
+                <input type="submit", name = "deleteSubmit", , id = "deleteSubmit", value="DELETE">
+            </form>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.user_id}}">
+                <input type="submit", name = "editSubmit", id="editSubmit", value="EDIT">
+            </form>
+
+        </td>
+    </tr>
+    {{/each}}
+   
+</table>
+

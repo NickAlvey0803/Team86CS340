@@ -1,0 +1,71 @@
+<head>
+    <title>Videos/Competitions of Whitelights</title>
+    <h1 class="page_header">Videos Per Competition or Competitions Per Video</h1>
+    <link rel="stylesheet" href="team86_style.css">
+</head>
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+
+<script src="/videos_competitions-frontend.js"></script>
+
+<div class="nav_list">
+            <nav>
+                <ul class="Navigation">
+                    <li class="link"><a class="nav_link" href="/index.html">Home</a></li>
+                    <li class="link"><a class="nav_link" href="/users">Users</a></li>
+                    <li class="link"><a class="nav_link" href="/videos">Videos</a></li>
+                    <li class="link"><a class="nav_link" href="/competitions">Competitions</a></li>
+                    <li class="link"><a class="nav_link" href="/comments">Comments</a></li>
+                    <li class = "link_current"><strong>Videos/Competitions</strong></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<form>
+  <fieldset>
+    <legend>Enter the Video Name or Competition Name</legend>
+    <label for="vid">Enter the Video Title (functionality is currently not here, enter VID): </label>
+    <input type="text" name="vid" id="vid">
+    <label for="cid">Enter the Competition Name (functionality is currently not here, enter CID): </label>
+    <input type="text" name="cid" id="cid">
+    <input type="submit" id="video_competitionSubmit">
+  </fieldset>
+</form>
+
+<table class= "bodydiv">
+
+    <tr>
+
+        <th>VID</th>
+        <th>CID</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    {{#each results}}
+    <tr>
+        
+        <td>{{this.vid}}</td>
+        <td>{{this.cid}}</td>
+        
+        <td>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.vid}}">
+                <input type="submit", name = "deleteSubmit", , id = "deleteSubmit", value="DELETE">
+            </form>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.vid}}">
+                <input type="submit", name = "editSubmit", id="editSubmit", value="EDIT">
+            </form>
+
+        </td>
+    </tr>
+    {{/each}}
+   
+</table>

@@ -1,0 +1,81 @@
+
+<head>
+    <title>Videos of Whitelights</title>
+    <h1 class="page_header">Videos</h1>
+    <link rel="stylesheet" href="team86_style.css">
+</head>
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+
+<script src="/videos-frontend.js"></script>
+
+<div class="nav_list">
+            <nav>
+                <ul class="Navigation">
+                    <li class="link"><a class="nav_link" href="/index.html">Home</a></li>
+                    <li class="link"><a class="nav_link" href="/users">Users</a></li>
+                    <li class = "link_current"><strong>Videos</strong></li>
+                    <li class="link"><a class="nav_link" href="/competitions">Competitions</a></li>
+                    <li class="link"><a class="nav_link" href="/comments">Comments</a></li>
+                    <li class="link"><a class="nav_link" href="/videos_competitions">Videos/Competitions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<form>
+  <fieldset>
+    <legend>Upload Some Information About Your Video</legend>
+    <label for="category">Category (Type of Lift): </label>
+    <input type="text" name="category" id="category">
+    <label for="weight">How Much Did You Lift?: </label>
+    <input type="text" name="weight" id="weight">
+    <label for="uploader_weight">How Much Do You Weigh?: </label>
+    <input type="text" name="uploader_weight" id="uploader_weight">
+    <label for="light_score">Enter the Initial Score (will be updated by comments, enter TRUE for passing, FALSE for not passing): </label>
+    <input type="text" name="light_score" id="light_score">
+    <label for="uid">What is Your Username? (Functionality is not here yet, for now enter UID): </label>
+    <input type="text" name="uid" id="uid">
+    <input type="submit" id="videoSubmit">
+  </fieldset>
+</form>
+
+<table class= "bodydiv">
+
+    <tr>
+        <th>UID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Description</th>
+        <th>Light Score</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    {{#each results}}
+    <tr>
+        <td>{{this.uid}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.weight}}</td>
+        <td>{{this.uploader_weight}}</td>
+        <td>{{this.light_score}}</td>
+        <td>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.video_id}}">
+                <input type="submit", name = "deleteSubmit", , id = "deleteSubmit", value="DELETE">
+            </form>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.video_id}}">
+                <input type="submit", name = "editSubmit", id="editSubmit", value="EDIT">
+            </form>
+
+        </td>
+    </tr>
+    {{/each}}
+   
+</table>

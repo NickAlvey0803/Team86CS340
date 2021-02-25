@@ -1,0 +1,79 @@
+
+<head>
+    <title>Comments of Whitelights</title>
+    <h1 class="page_header">Comments</h1>
+    <link rel="stylesheet" href="team86_style.css">
+</head>
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+
+<script src="/comments-frontend.js"></script>
+
+<div class="nav_list">
+            <nav>
+                <ul class="Navigation">
+                    <li class="link"><a class="nav_link" href="/index.html">Home</a></li>
+                    <li class="link"><a class="nav_link" href="/users">Users</a></li>
+                    <li class="link"><a class="nav_link" href="/videos">Videos</a></li>
+                    <li class="link"><a class="nav_link" href="/competitions">Competitions</a></li>
+                    <li class = "link_current"><strong>Comments</strong></li>
+                    <li class="link"><a class="nav_link" href="/videos_competitions">Videos/Competitions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<form>
+  <fieldset>
+    <legend>Upload Your Comment</legend>
+    <label for="uid">Enter Your Username (functionality is currently not here, enter UID): </label>
+    <input type="text" name="uid" id="uid">
+    <label for="vid">Enter the Title of the Video You Wish To Comment On (functionality is currently not here, enter VID): </label>
+    <input type="text" name="vid" id="vid">
+    <label for="description">Enter Your Comment: </label>
+    <input type="text" name="description" id="description">
+    <label for="light_score">What Would You Score It (enter TRUE for a White Light and FALSE for a Red Light): </label>
+    <input type="text" name="light_score" id="light_score">
+    <input type="submit" id="commentSubmit">
+  </fieldset>
+</form>
+
+<table class= "bodydiv">
+
+    <tr>
+
+        <th>UID</th>
+        <th>VID</th>
+        <th>Comment</th>
+        <th>Light Score</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    {{#each results}}
+    <tr>
+        
+        <td>{{this.uid}}</td>
+        <td>{{this.vid}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.light_score}}</td>
+        <td>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.comment_id}}">
+                <input type="submit", name = "deleteSubmit", , id = "deleteSubmit", value="DELETE">
+            </form>
+            <form method="get">
+                <input type="hidden", name = "id", id = "id", value="{{this.comment_id}}">
+                <input type="submit", name = "editSubmit", id="editSubmit", value="EDIT">
+            </form>
+
+        </td>
+    </tr>
+    {{/each}}
+   
+</table>
